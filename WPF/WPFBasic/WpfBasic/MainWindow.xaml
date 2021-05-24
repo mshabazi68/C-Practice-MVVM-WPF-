@@ -7,9 +7,11 @@
         mc:Ignorable="d"
         Title="Wpf Basics" Height="800" Width="400">
 
-
+    
     <Border Padding="10">
+        
         <StackPanel>
+           
             <!-- Buttons -->
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -21,8 +23,8 @@
 
                 </Grid.ColumnDefinitions>
 
-                <Button Margin="0 0 10 0" Grid.Column="0" Content="Apply" />
-                <Button  Grid.Column="1" Content="Reset"/>
+                <Button x:Name="ApplyButton" Click="ApplyButton_Click" Margin="0 0 10 0" Grid.Column="0" Content="Apply" />
+                <Button x:Name="RestButton" Click="ResetButton_Click" Grid.Column="1" Content="Reset"/>
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
 
             </Grid>
@@ -33,7 +35,7 @@
             <!-- Description -->
 
             <TextBlock Text="Description"/>
-            <TextBox  Padding="2"/>
+            <TextBox x:Name="DescriptionText"  Padding="2"/>
 
 
             <!-- Status and Revisions -->
@@ -85,20 +87,20 @@
                 </Grid.ColumnDefinitions>
                 <!--Column 1 -->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                    <CheckBox Content="Weld" />
-                    <CheckBox Content="Assembly"/>
-                    <CheckBox Content="Plasma"/>
-                    <CheckBox Content="Laser"/>
-                    <CheckBox Content="Purchase"/>
+                    <CheckBox Checked="Check_Checked" x:Name="welldCheck" Content="Weld" />
+                    <CheckBox Checked="Check_Checked" x:Name="AssemblyCheck"  Content="Assembly"/>
+                    <CheckBox Checked="Check_Checked" x:Name="PlasmaCheck" Content="Plasma"/>
+                    <CheckBox Checked="Check_Checked" x:Name="LaserCheck" Content="Laser"/>
+                    <CheckBox Checked="Check_Checked" x:Name="PurchaseCheck" Content="Purchase"/>
                 </StackPanel>
 
                 <!-- Column 2 -->
                 <StackPanel Grid.Column="1">
-                    <CheckBox Content="lathe"/>
-                    <CheckBox Content="Drill"/>
-                    <CheckBox Content="Fold"/>
-                    <CheckBox Content="Roll"/>
-                    <CheckBox Content="Saw"/>
+                    <CheckBox Checked="Check_Checked" x:Name="latheCheck" Content="lathe"/>
+                    <CheckBox Checked="Check_Checked" x:Name="DrillCheck" Content="Drill"/>
+                    <CheckBox Checked="Check_Checked" x:Name="FoldCheck" Content="Fold"/>
+                    <CheckBox Checked="Check_Checked" x:Name="RollCheck" Content="Roll"/>
+                    <CheckBox Checked="Check_Checked" x:Name="SawCheck" Content="Saw"/>
 
                 </StackPanel>
                
@@ -108,7 +110,7 @@
             <!-- Length -->
 
             <TextBlock Text="Length"/>
-            <TextBox Padding="2"/>
+            <TextBox x:Name="LengthText" Padding="2"/>
             
             <!--Mass -->
             <TextBlock Text="Mass" />
@@ -116,14 +118,14 @@
 
             <!--Finish -->
             <TextBlock Text="Finish"/>
-            <ComboBox Selected="0" Padding="2">
+            <ComboBox SelectionChanged="FinishDropdown_selection" x:Name="FinishDropDown" SelectedIndex="0" Padding="2" >
                 <ComboBoxItem> painted </ComboBoxItem>
                 <ComboBoxItem> Not painted </ComboBoxItem>
             </ComboBox>
 
                     <!--Purchase Information -->
             <TextBlock Text="Purchase Information"/>
-            <ComboBox Selected="0" Padding="2">
+            <ComboBox SelectedIndex="0" Padding="2">
                 <ComboBoxItem>Rubber</ComboBoxItem>
                 <ComboBoxItem>Not Rubber</ComboBoxItem>
             </ComboBox>
@@ -142,9 +144,12 @@
 
             <!-- Note -->
             <TextBlock Text="Note" Margin="0 10 0 0"/>
-            <TextBox Padding="2"/>
-
+            <TextBox Name="NoteText" Padding="2"/>
+                
+            
         </StackPanel>
+       
+            
     </Border>
     
     
