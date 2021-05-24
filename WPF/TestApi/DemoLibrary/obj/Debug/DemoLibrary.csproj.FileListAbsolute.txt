@@ -1,0 +1,12 @@
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\DemoLibrary.dll.config
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\DemoLibrary.dll
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\DemoLibrary.pdb
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\obj\Debug\DemoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\obj\Debug\DemoLibrary.csproj.CopyComplete
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\obj\Debug\DemoLibrary.dll
+C:\Users\Shah\source\repos\TestAPI\DemoLibrary\obj\Debug\DemoLibrary.pdb
