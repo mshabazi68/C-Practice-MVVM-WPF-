@@ -22,6 +22,7 @@ namespace Calculator
     {
 
         double lastNumber, result ;
+        SelectedOperator selectedOperator;
         public MainWindow()
         {
             InitializeComponent();
@@ -44,9 +45,44 @@ namespace Calculator
             }
         }
 
+        private void btnDot_click(object sender, RoutedEventArgs e)
+        {
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                //Do noting
+            }
+            else
+            {
+                resultLabel.Content = $" {resultLabel.Content}.";
+            }
+        }
         private void BtnEqual_Click(object sender, RoutedEventArgs e)
         {
-           // code here
+            double newNumber;
+            if (double.TryParse(resultLabel.Content.ToString(), out newNumber))
+            {
+                switch (selectedOperator)
+                {
+                    case SelectedOperator.Addition:
+                        result = CalculateMath.Add(lastNumber, newNumber);
+                        break;
+
+                    case SelectedOperator.Subtraction:
+                        result = CalculateMath.Subtract(lastNumber, newNumber);
+                        break;
+
+                    case SelectedOperator.Multiplication:
+                        result = CalculateMath.Multiply(lastNumber, newNumber);
+                        break;
+
+                    case SelectedOperator.Division:
+                        result = CalculateMath.Divid(lastNumber, newNumber);
+                        break;
+                }
+                resultLabel.Content = result.ToString();
+            }
+
+
         }
 
         private void BtnAC_Click(object sender, RoutedEventArgs e)
@@ -69,19 +105,67 @@ namespace Calculator
 
         }
 
-        private void btn7_Click(object sender, RoutedEventArgs e)
+        private void OperationBtn_click (object sender , RoutedEventArgs e)
         {
+            if ( double.TryParse(resultLabel.Content.ToString() , out lastNumber))
+            {
+                
+                resultLabel.Content = "0";
+            }
+            if ( sender == btnMulti)
+                selectedOperator = SelectedOperator.Multiplication;
+
+            if (sender == btnDiv)
+                selectedOperator = SelectedOperator.Division;
+            if (sender == btnAdd)
+                selectedOperator = SelectedOperator.Addition;
+            if (sender == btnSub)
+                selectedOperator = SelectedOperator.Subtraction;
+
+        }
+
+        private void NumberBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            int selectedValue = int.Parse((sender as Button).Content.ToString());
+
             if (resultLabel.Content.ToString() == "0")
             {
-                resultLabel.Content = "7";
+                resultLabel.Content = $" {selectedValue }";
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content }7";
+                resultLabel.Content = $"{resultLabel.Content }{selectedValue}";
             }
         }
-
-
         
+    }
+    public enum SelectedOperator
+    {
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division
+
+    }
+
+    public class CalculateMath
+    {
+        public static double Add ( double num1 , double num2)
+        {
+            return num1 + num2;
+        }
+        public static double Subtract (double num1 , double num2)
+        {
+            return num1 - num2;
+        }
+        public static double Divid (double num1, double num2)
+        {
+            return num1 / num2;
+        }
+        public static double Multiply(double num1, double num2)
+        {
+            return num1 * num2;
+        }
     }
 }
