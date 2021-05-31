@@ -65,10 +65,15 @@ namespace Calculator
 
         private void BtnMod_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            double tempNumber;
+            if (double.TryParse(resultLabel.Content.ToString(), out tempNumber))
             {
-                lastNumber = lastNumber / 100;
-                resultLabel.Content = lastNumber.ToString();
+                tempNumber = tempNumber / 100;
+                if ( lastNumber != 0)
+                {
+                    tempNumber *= lastNumber;
+                }
+                resultLabel.Content = tempNumber.ToString();
 
 
             }
@@ -134,11 +139,11 @@ namespace Calculator
 
             if (resultLabel.Content.ToString() == "0")
             {
-                resultLabel.Content = $" {selectedValue }";
+                resultLabel.Content = $"{selectedValue}";
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content }{selectedValue}";
+                resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
         }
         
@@ -168,7 +173,7 @@ namespace Calculator
         {
             if ( num2 == 0)
             {
-                MessageBox.Show("Can not Divid by 0 ", "Opps! Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Can Not Divid By 0 ", "Opps! Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return 0;
                 
             }
