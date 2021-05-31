@@ -34,28 +34,6 @@ namespace Calculator
 
         }
 
-        private void BtnMod_Click(object sender, RoutedEventArgs e)
-        {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
-            {
-                lastNumber = lastNumber / 100;
-                resultLabel.Content = lastNumber.ToString();
-
-
-            }
-        }
-
-        private void btnDot_click(object sender, RoutedEventArgs e)
-        {
-            if (resultLabel.Content.ToString().Contains("."))
-            {
-                //Do noting
-            }
-            else
-            {
-                resultLabel.Content = $" {resultLabel.Content}.";
-            }
-        }
         private void BtnEqual_Click(object sender, RoutedEventArgs e)
         {
             double newNumber;
@@ -85,15 +63,18 @@ namespace Calculator
 
         }
 
-        private void BtnAC_Click(object sender, RoutedEventArgs e)
+        private void BtnMod_Click(object sender, RoutedEventArgs e)
         {
-            resultLabel.Content = "0";
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber / 100;
+                resultLabel.Content = lastNumber.ToString();
+
+
+            }
         }
 
-        private void BtnDiv_Click(object sender, RoutedEventArgs e)
-        {
-            resultLabel.Content = "0";
-        }
+
 
         private void BtnPlusmin_Click(object sender, RoutedEventArgs e)
         {
@@ -105,16 +86,21 @@ namespace Calculator
 
         }
 
-        private void OperationBtn_click (object sender , RoutedEventArgs e)
+
+        private void BtnAC_Click(object sender, RoutedEventArgs e)
         {
-            if ( double.TryParse(resultLabel.Content.ToString() , out lastNumber))
+            resultLabel.Content = "0";
+        }
+
+        private void OperationBtn_click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
-                
+
                 resultLabel.Content = "0";
             }
-            if ( sender == btnMulti)
+            if (sender == btnMulti)
                 selectedOperator = SelectedOperator.Multiplication;
-
             if (sender == btnDiv)
                 selectedOperator = SelectedOperator.Division;
             if (sender == btnAdd)
@@ -123,7 +109,24 @@ namespace Calculator
                 selectedOperator = SelectedOperator.Subtraction;
 
         }
+        private void btnDot_click(object sender, RoutedEventArgs e)
+        {
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                //Do noting
+            }
+            else
+            {
+                resultLabel.Content = $" {resultLabel.Content}.";
+            }
+        }
 
+
+        private void BtnDiv_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
+        }
+     
         private void NumberBtn_Click(object sender, RoutedEventArgs e)
         {
 
@@ -140,6 +143,8 @@ namespace Calculator
         }
         
     }
+
+  
     public enum SelectedOperator
     {
         Addition,
@@ -161,6 +166,12 @@ namespace Calculator
         }
         public static double Divid (double num1, double num2)
         {
+            if ( num2 == 0)
+            {
+                MessageBox.Show("Can not Divid by 0 ", "Opps! Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+                
+            }
             return num1 / num2;
         }
         public static double Multiply(double num1, double num2)
