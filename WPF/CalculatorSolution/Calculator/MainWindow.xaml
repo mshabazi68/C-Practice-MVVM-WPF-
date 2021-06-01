@@ -36,29 +36,29 @@
                     VerticalAlignment="Bottom"
                     Grid.ColumnSpan="4"/>
             <!--1st Row -->
-            <Button x:Name="btnAC" Foreground="Black" Margin="2" Content="AC" Grid.Row="1"/>
-            <Button x:Name="btnPlusmin" Foreground="Black" Margin="2" Content="+/-" Grid.Row="1" Grid.Column="1"/>
-            <Button x:Name="btnMod" Foreground="Black" Margin="2" Content="%" Grid.Row="1" Grid.Column="2"/>
-            <Button Click="OperationBtn_click" x:Name="btnDiv" Background="{StaticResource OperatorColor}"  Margin="2" Content="/" Grid.Row="1" Grid.Column="3"/>
+            <Button x:Name="btnAC" Style="{StaticResource additionalBtnStyle}" Content="AC" Grid.Row="1"/>
+            <Button x:Name="btnPlusmin" Style="{StaticResource additionalBtnStyle}" Content="+/-" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="btnMod" Style="{StaticResource additionalBtnStyle}" Content="%" Grid.Row="1" Grid.Column="2"/>
+            <Button Click="OperationBtn_click" Style="{StaticResource OperationBtnStyle}" x:Name="btnDiv"  Content="/" Grid.Row="1" Grid.Column="3"/>
             <!--2nd Row -->
-            <Button Click="NumberBtn_Click" x:Name="btn7" Background="{StaticResource numbercolor}"  Margin="2" Content="7" Grid.Row="2"/>
-            <Button Click="NumberBtn_Click" x:Name="btn8" Background="{StaticResource numbercolor}"  Margin="2" Content="8" Grid.Row="2" Grid.Column="1"/>
-            <Button Click="NumberBtn_Click" x:Name="btn9" Background="{StaticResource numbercolor}"  Margin="2" Content="9" Grid.Row="2" Grid.Column="2"/>
-            <Button Click="OperationBtn_click" x:Name="btnMulti" Background="{StaticResource OperatorColor}"  Margin="2" Content="*" Grid.Row="2" Grid.Column="3"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn7"  Content="7" Grid.Row="2"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn8"  Content="8" Grid.Row="2" Grid.Column="1"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn9"  Content="9" Grid.Row="2" Grid.Column="2"/>
+            <Button Click="OperationBtn_click" Style="{StaticResource OperationBtnStyle}" x:Name="btnMulti"  Content="*" Grid.Row="2" Grid.Column="3"/>
             <!--3rd Row -->
-            <Button Click="NumberBtn_Click" x:Name="btn4" Background="{StaticResource numbercolor}"  Margin="2" Content="4" Grid.Row="3"/>
-            <Button Click="NumberBtn_Click" x:Name="btn5" Background="{StaticResource numbercolor}"  Margin="2" Content="5" Grid.Row="3" Grid.Column="1"/>
-            <Button Click="NumberBtn_Click" x:Name="btn6" Background="{StaticResource numbercolor}"  Margin="2" Content="6" Grid.Row="3" Grid.Column="2"/>
-            <Button Click="OperationBtn_click"  x:Name="btnSub" Background="{StaticResource OperatorColor}"  Margin="2" Content="-" Grid.Row="3" Grid.Column="3"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn4"  Content="4" Grid.Row="3"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn5"  Content="5" Grid.Row="3" Grid.Column="1"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn6"  Content="6" Grid.Row="3" Grid.Column="2"/>
+            <Button Click="OperationBtn_click" Style="{StaticResource OperationBtnStyle}" x:Name="btnSub"  Content="-" Grid.Row="3" Grid.Column="3"/>
             <!--4th Row -->
-            <Button Click="NumberBtn_Click" x:Name="btn1" Background="{StaticResource numbercolor}"  Margin="2" Content="1" Grid.Row="4"/>
-            <Button Click="NumberBtn_Click" x:Name="btn2" Background="{StaticResource numbercolor}"  Margin="2" Content="2" Grid.Row="4" Grid.Column="1"/>
-            <Button Click="NumberBtn_Click" x:Name="btn3" Background="{StaticResource numbercolor}"  Margin="2" Content="3" Grid.Row="4" Grid.Column="2"/>
-            <Button Click="OperationBtn_click" x:Name="btnAdd" Background="{StaticResource OperatorColor}" Margin="2" Content="+" Grid.Row="4" Grid.Column="3"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn1"  Content="1" Grid.Row="4"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn2"  Content="2" Grid.Row="4" Grid.Column="1"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn3"  Content="3" Grid.Row="4" Grid.Column="2"/>
+            <Button Click="OperationBtn_click" Style="{StaticResource OperationBtnStyle}" x:Name="btnAdd"  Content="+" Grid.Row="4" Grid.Column="3"/>
             <!--5th Row -->
-            <Button Click="NumberBtn_Click" x:Name="btn0" Background="{StaticResource numbercolor}"  Margin="2" Content="0" Grid.ColumnSpan="2" Grid.Row="5"/>
-            <Button x:Name="btnDot" Background="{StaticResource numbercolor}" Margin="2" Content="." Grid.Row="5" Grid.Column="2"/>
-            <Button x:Name="btnEqual"  Margin="2" Background="{StaticResource OperatorColor}" Content="=" Grid.Row="5" Grid.Column="3"/>
+            <Button Click="NumberBtn_Click" Style="{StaticResource numberBtnStyle}" x:Name="btn0"  Content="0" Grid.ColumnSpan="2" Grid.Row="5"/>
+            <Button x:Name="btnDot"  Style="{StaticResource numberBtnStyle}" Content="." Grid.Row="5" Grid.Column="2"/>
+            <Button x:Name="btnEqual" Style="{StaticResource OperationBtnStyle}" Content="=" Grid.Row="5" Grid.Column="3"/>
 
 
     </Grid>

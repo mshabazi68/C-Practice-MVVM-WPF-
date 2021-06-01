@@ -7,14 +7,38 @@
         <SolidColorBrush x:Key="numbercolor" Color="#444444"/>
         <SolidColorBrush x:Key="OperatorColor" Color="Orange"/>
         <SolidColorBrush x:Key="fontColor" Color="White"/>
-
+        <!--General  Button Style -->
         <Style TargetType="Button">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="3"/>
             
         </Style>
+       
+        <!--Numbers Button Style -->
+        <Style TargetType="Button" x:Key="numberBtnStyle">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="{StaticResource numbercolor}"/>
+        </Style>
+        <!--Operation Button Style -->
+        <Style TargetType="Button" x:Key="OperationBtnStyle" BasedOn="{StaticResource numberBtnStyle}">
+            <Setter Property="Background" Value="{StaticResource OperatorColor}"/>
+        </Style>
+
+        <!--Extra Button Style for  (% | +/- | AC ) -->
+        <Style TargetType="Button" x:Key="additionalBtnStyle" BasedOn="{StaticResource numberBtnStyle}">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Foreground" Value="Black"/>
+
+        </Style>
+        <!--Label Style -->
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Margin" Value="5"/>
+
         </Style>
+
     </Application.Resources>
 </Application>
