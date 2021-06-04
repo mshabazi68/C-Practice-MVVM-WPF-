@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tvrx24UrRxu/63sV/WktgfW3vr5Dx8mPYhKUkn4NLFZ82mRsMQdTe0HfHYbAjlUSpYniqYw3Q/rRwRr3FQdD6g==",
+  "dgSpecHash": "Mu9/1yl6O1r5XwWypeJNk/8Rvsad+uV0I8F+AD2uivczHJXvjZDQilhWp7br/cBMF17u4svR7sLsSze8bDmtsw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Shah\\source\\repos\\DesktopContactApp\\DesktopContactApp\\DesktopContactApp.csproj",
+  "projectFilePath": "C:\\Users\\Shah\\source\\repos\\ContactApp\\ContactApp\\ContactApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shah\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\Shah\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
